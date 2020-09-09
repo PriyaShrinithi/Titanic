@@ -86,11 +86,10 @@
   ### Random Forest Classifier:
   
    ##### Accuracy:
-    1. No major accuracy change in accuracy for depth, hence it is maintained as None.
-    2. At max_leaf = 2, accuracy: 88.5%
-    3. At max_leaf = 3, accuracy: 98.8%
-    4. At max_leaf = 10, accuracy: 93.7%
-    5. Thus we can observe that:
+    1. At max_leaf = 2, accuracy: 88.5%
+    2. At max_leaf = 3, accuracy: 98.8%
+    3. At max_leaf = 10, accuracy: 93.7%
+    4. Thus we can observe that:
       a) accuracy diference between 2 to 3 (leaves) is close to 10.2%
       b) accuracy difference between 3 to 10 (leaves) is 5.1% approx.
    
@@ -116,10 +115,11 @@
  ## Inference:
  
  ## Future Work:
-    1. In depth Hyperparameter Tuning with the help of Grid Search
-    2. Gradient Boost
-    3. Better EDA
+    1. In depth Hyperparameter Tuning 
+    2. Grid Search
+    3. Gradient Boost
+    4. Better EDA
       a) In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
       b) Comparing Correlating attributes. For instance, finding which of the unmarried women who survived has at least one sibling who also survived.
-    4. Select features for a specific threshold, say 0.3, 0.5 and 0.7 and check accuracy 
-    5. Work Around for Chain Indexing
+    5. Select features for a specific threshold 
+    6. Work Around for Chain Indexing
