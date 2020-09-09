@@ -53,16 +53,22 @@
     1. Embarked
     2. Sex
     3. Name_Title 
+  
+ ## HeatMap of the Correlation Coefficient:
+  1. Correlation Coeeficient r between 2 items A and B states the quality of relationship between the two items A and B.
+  2. HeatMap displays the correlation relationship between all items. 
+  3. The strongest +ve relation is however within itself for every Feature.
+  4. We use the Correlation to Select Features
 
-## Data Selection:
-  ### Features we have selected: 
+## Features Selection:
+  ### Selected: 
     1. Age
     2. Sex
     3. Pclass
     4. Sibsp (Siblings and Spouses)
     6. Parch (Parents and Children)
     
-##  Reasons why following features have been rejected:
+##  Rejected:
     1. Cabin: While this has a pretty good Correlation Coefficient values (r), we have removed this feature to more nAn values
     2. PassengerId: Vey low value with respect to Survived
     3. Fare: Low r value corresponding to Survived
