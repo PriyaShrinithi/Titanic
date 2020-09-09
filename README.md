@@ -27,9 +27,9 @@
             3. Cabin_Type has not been created in this solution because of the large volume of NaN values.
    
    #### Name_Title:
-            1. It takes the epithet of a given name such as Mr. and Mrs.
+            1. It takes the honorific of a given name such as Mr. and Mrs.
             2. It is created to contribute to the analyse the Survival rates of Nobility over the working class.
-            3. Name_Titles woth same meanings (Mlle, Ms. and Mme., Mrs.) have been replaced with the commonly ocured Name_Title(Ms. an Mrs.)
+            3. Name_Titles with same meanings (Mlle, Ms. and Mme., Mrs.) have been replaced with the commonly ocured Name_Title(Ms. an Mrs.)
             
   ### Encoding:
       We have used an Ordinal Encoder to Encode Columns with String values. 
@@ -37,7 +37,23 @@
         1. Embarked
         2. Sex
         3. Name_Title 
-      
+## Plots:
+
+### Sex vs Survived:
+    Females have a higher Chance of Survival.
+    
+### Embarked vs Survived:
+    There is not really much of a difference. But for the sake of quantifying this plot, it would be accurate to say that people who have embarked from place C have a better Survival Rate.
+    
+### SibSp vs Suvived: 
+    SibSp is the abbreviated form of Sibling and Spouse.
+    It was observed that Those with 1 Sibling or just their Spouse had a higher chance if Survival.
+    
+### Name_Title vs Survived:
+     People with the Name_Titles: 'Sir', 'Countess' and 'Lady' have survived.
+     Additionally, most of the people with the honorifics: 'Mrs', 'Ms', 'Master' have a higher Survival Rate
+     Thus we infer that, Women, Children and Nobles have a higher Survival Rate
+
 ## Data Selection:
   ### Features we have selected: 
     1. Age
@@ -59,7 +75,9 @@
 ## Check train and test once again:
   To check if the order and selection of train features and test features were the same. 
   When it was seen that they weren't, train features were switched to match test.
-  
+
+
+
 ## Models and Observations:
   ### Random Forest Classifier:
   
@@ -77,22 +95,20 @@
   ### Logistic Regression:
   
    ##### Accuracy:
-    1.
-    
    ##### Error Scores:
    ##### Inference:
    
   ### Naive Bayes Classifier:
   
    ##### Accuracy:
-    1.
-    
    ##### Error Scores:
    ##### Inference:
    
   ## Future Work:
     1. In depth Hyperparameter Tuning with the help of Grid Search
     2. Gradient Boost
-    3. Better EDA.
-    4. In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
-    5. Select featgures for a specific threshold.
+    3. Better EDA
+      a) In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
+      b) Comparing Correlating attributes. For instance, finding which of the unmarried women who survived has at least one sibling who also survived.
+    4. Select features for a specific threshold, say 0.3, 0.5 and 0.7 and check accuracy 
+    5. Work Around for Chain Indexing
