@@ -46,6 +46,8 @@
   
 ## Models and Observations:
   ### Random Forest Classifier:
+  
+   ##### Accuracy:
     1. No major accuracy change in accuracy for depth, hence it is maintained as None.
     2. At max_leaf = 2, accuracy: 88.5%
     3. At max_leaf = 3, accuracy: 98.8%
@@ -53,8 +55,25 @@
     5. Thus we can observe that accuracy diference between 2 to 3 (leaves) is close to 10.2%, while accuracy difference between 3 to 10 (leaves) is 5.1% approx.
     6. 
     
-   ### Error Scores:
-   ### Inference:
+   ##### Error Scores:
+   ##### Inference:
+   
+  ### Logistic Regression:
+  
+   ##### Accuracy:
+    1.
+    
+   ##### Error Scores:
+   ##### Inference:
+   
+  ### Naive Bayes Classifier:
+  
+   ##### Accuracy:
+    1.
+    
+   ##### Error Scores:
+   ##### Inference:
+   
   ## Future Work:
     1. In depth Hyperparameter Tuning with the help of Grid Search
     2. Gradient Boost
