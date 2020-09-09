@@ -18,9 +18,25 @@
     The problem with Cabin is the fact that it has way too many NaN values to the point it is the Top most value. 
     Ergo Cabin would eventually not be selected for the features.
   
-  ### Analysing Data:.
-    1. 
+  ### Derviving Features:
+    There was a possibilty to derive the Cabin_Type and Name_Title from Cabin and Name respectively. 
+    
+   #### Cabin_Type:
+            1. Cabin_Type would simply take the alphabetical character at the start of the string.
+            2. It would contribute to the Type of Cabin
+            3. Cabin_Type has not been created in this solution because of the large volume of NaN values.
    
+   #### Name_Title:
+            1. It takes the epithet of a given name such as Mr. and Mrs.
+            2. It is created to contribute to the analyse the Survival rates of Nobility over the working class.
+            
+  ### Encoding:
+      We have used an Ordinal Encoder to Encode Columns with String values. 
+      The Columns encoded using an Ordinal Encoder are as follows:
+        1. Embarked
+        2. Sex
+        3. Name_Title 
+       It is essential to mention that in Name_Title
 ## Data Selection:
   ### Features we have selected: 
     1. Age
@@ -36,8 +52,7 @@
     3. Fare: Low r value corresponding to Survived
     4. Ticket: Low r value corresponding to Survived
     5. Name: Low r value corresponding to Survived
-    6. Name_Title: This was originally created to contribute to the analyse the Survival rates of Nobility over the working class.
-                    But it was later removed since the r value corresponding to Survived was lesser than expected
+    6. Name_Title: Removed since the r value corresponding to Survived was lesser than expected
     7. Embarked: Low r value
     
 ## Check train and test once again:
