@@ -2,8 +2,23 @@
 
 ## EDA:
   To understand the dataset better, we did an Exploratory Data Analysis using pandas and Numpy. 
-  ### Observations:
+  
+  ### About the DataFrame:
     From that, we have observed that the Titanic train Dataset has a total of 891 rows and the test Dataset has a total of 418 rows. Each of the before mentioned Datasets initially have 6 dependent features (X) viz-a-viz PassengerId, Name,	Pclass,	Age,	SibSp,	Parch and	Fare. Additionally, the train Dataframe has the Independent Target (y) namely Survived. The train Dataset has a total of 899 values throughout the Dataframe. The test on the other hand has 414 null values. 
+  
+  ### Handling Null data:
+  
+   ##### Exhibit A: Age - Continuous Value:
+     Replacing Null with mean.
+    
+   ##### Exhibit B: Embark - Discrete value:
+    Replacing Null with Top
+    
+   ##### Exhibit C: Cabin - Discrete value (Comes with a Catch):
+    The problem with Cabin is the fact that it has way too many NaN values to the point it is the Top most value. Ergo Cabin would eventually not be selected for the features.
+  
+  ### Analysing Data:
+    
     
 ## Data Selection:
   ### Features we have selected: 
