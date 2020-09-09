@@ -92,6 +92,8 @@
     4. Thus we can observe that:
       a) accuracy diference between 2 to 3 (leaves) is close to 10.2%
       b) accuracy difference between 3 to 10 (leaves) is 5.1% approx.
+      Inference: For Different max_leaf values, accuracy differs.
+    5. Find Optimum max_leaf, i.e max_leaf such thta it doesn't Overfit or Underfit the Data.
    
     
    ##### Error Scores:
