@@ -15,11 +15,12 @@
     Replacing Null with Top
     
    ##### Exhibit C: Cabin - Discrete value (Comes with a Catch):
-    The problem with Cabin is the fact that it has way too many NaN values to the point it is the Top most value. Ergo Cabin would eventually not be selected for the features.
+    The problem with Cabin is the fact that it has way too many NaN values to the point it is the Top most value. 
+    Ergo Cabin would eventually not be selected for the features.
   
-  ### Analysing Data:
-    
-    
+  ### Analysing Data:.
+    1. 
+   
 ## Data Selection:
   ### Features we have selected: 
     1. Age
@@ -35,9 +36,14 @@
     3. Fare: Low r value corresponding to Survived
     4. Ticket: Low r value corresponding to Survived
     5. Name: Low r value corresponding to Survived
-    6. Name_Title: This was originally created to contribute to the analyse the Survival rates of Nobility over the working class. r value corresponding to Survived
+    6. Name_Title: This was originally created to contribute to the analyse the Survival rates of Nobility over the working class.
+                    But it was later removed since the r value corresponding to Survived was lesser than expected
     7. Embarked: Low r value
-
+    
+## Check train and test once again:
+  To check if the order and selection of train features and test features were the same. 
+  When it was seen that they weren't, train features were switched to match test.
+  
 ## Models and Observations:
   ### Random Forest Classifier:
     1. No major accuracy change in accuracy for depth, hence it is maintained as None.
@@ -54,4 +60,4 @@
     2. Gradient Boost
     3. Better EDA.
     4. In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
-    5. 
+    5. Select featgures for a specific threshold.
