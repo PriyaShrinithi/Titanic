@@ -30,29 +30,29 @@
             1. It takes the honorific of a given name such as Mr. and Mrs.
             2. It is created to contribute to the analyse the Survival rates of Nobility over the working class.
             3. Name_Titles with same meanings (Mlle, Ms. and Mme., Mrs.) have been replaced with the commonly ocured Name_Title(Ms. an Mrs.)
-            
-  ### Encoding:
-      We have used an Ordinal Encoder to Encode Columns with String values. 
-      The Columns encoded using an Ordinal Encoder are as follows:
-        1. Embarked
-        2. Sex
-        3. Name_Title 
 ## Plots:
 
-### Sex vs Survived:
+  ### Sex vs Survived:
     Females have a higher Chance of Survival.
     
-### Embarked vs Survived:
+  ### Embarked vs Survived:
     There is not really much of a difference. But for the sake of quantifying this plot, it would be accurate to say that people who have embarked from place C have a better Survival Rate.
     
-### SibSp vs Suvived: 
+  ### SibSp vs Suvived: 
     SibSp is the abbreviated form of Sibling and Spouse.
     It was observed that Those with 1 Sibling or just their Spouse had a higher chance if Survival.
     
-### Name_Title vs Survived:
+  ### Name_Title vs Survived:
      People with the Name_Titles: 'Sir', 'Countess' and 'Lady' have survived.
      Additionally, most of the people with the honorifics: 'Mrs', 'Ms', 'Master' have a higher Survival Rate
      Thus we infer that, Women, Children and Nobles have a higher Survival Rate
+     
+## Encoding:
+  We have used an Ordinal Encoder to Encode Columns with String values. 
+  The Columns encoded using an Ordinal Encoder are as follows:
+    1. Embarked
+    2. Sex
+    3. Name_Title 
 
 ## Data Selection:
   ### Features we have selected: 
@@ -62,7 +62,6 @@
     4. Sibsp (Siblings and Spouses)
     6. Parch (Parents and Children)
     
-
 ##  Reasons why following features have been rejected:
     1. Cabin: While this has a pretty good Correlation Coefficient values (r), we have removed this feature to more nAn values
     2. PassengerId: Vey low value with respect to Survived
@@ -75,8 +74,6 @@
 ## Check train and test once again:
   To check if the order and selection of train features and test features were the same. 
   When it was seen that they weren't, train features were switched to match test.
-
-
 
 ## Models and Observations:
   ### Random Forest Classifier:
