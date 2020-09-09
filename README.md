@@ -1,17 +1,17 @@
 # Titanic
 
 ## EDA:
-  To understand the dataset better, we did Exploratory Data Analysis using pandas.
+  To understand the dataset better, we did an Exploratory Data Analysis using pandas and Numpy. 
   ### Observations:
-  
-
+    From that, we have observed that the Titanic train Dataset has a total of 891 rows and the test Dataset has a total of 418 rows. Each of the before mentioned Datasets initially have 6 dependent features (X) viz-a-viz PassengerId, Name,	Pclass,	Age,	SibSp,	Parch and	Fare. Additionally, the train Dataframe has the Independent Target (y) namely Survived. The train Dataset has a total of 899 values throughout the Dataframe. The test on the other hand has 414 null values. 
+    
 ## Data Selection:
   ### Features we have selected: 
-    1. age
-    2. sex
-    3. pclass
-    4. sibsp (Siblings and Spouses)
-    6. parch (Parents and Children)
+    1. Age
+    2. Sex
+    3. Pclass
+    4. Sibsp (Siblings and Spouses)
+    6. Parch (Parents and Children)
     
 
 ##  Reasons why following features have been rejected:
@@ -33,7 +33,7 @@
     6. 
     
    ### Error Scores:
-   
+   ### Inference:
   ## Future Work:
     1. In depth Hyperparameter Tuning with the help of Grid Search
     2. Gradient Boost
