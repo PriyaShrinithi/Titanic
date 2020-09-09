@@ -29,6 +29,7 @@
    #### Name_Title:
             1. It takes the epithet of a given name such as Mr. and Mrs.
             2. It is created to contribute to the analyse the Survival rates of Nobility over the working class.
+            3. Name_Titles woth same meanings (Mlle, Ms. and Mme., Mrs.) have been replaced with the commonly ocured Name_Title(Ms. an Mrs.)
             
   ### Encoding:
       We have used an Ordinal Encoder to Encode Columns with String values. 
@@ -36,7 +37,7 @@
         1. Embarked
         2. Sex
         3. Name_Title 
-       It is essential to mention that in Name_Title
+      
 ## Data Selection:
   ### Features we have selected: 
     1. Age
