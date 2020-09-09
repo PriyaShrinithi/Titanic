@@ -36,7 +36,8 @@
     Females have a higher Chance of Survival.
     
   ### Embarked vs Survived:
-    There is not really much of a difference. But for the sake of quantifying this plot, it would be accurate to say that people who have embarked from place C have a better Survival Rate.
+    There is not really much of a difference.
+    But for the sake of quantifying this plot, it would be accurate to say that people who have embarked from place C have a better Survival Rate.
     
   ### SibSp vs Suvived: 
     SibSp is the abbreviated form of Sibling and Spouse.
@@ -89,8 +90,10 @@
     2. At max_leaf = 2, accuracy: 88.5%
     3. At max_leaf = 3, accuracy: 98.8%
     4. At max_leaf = 10, accuracy: 93.7%
-    5. Thus we can observe that accuracy diference between 2 to 3 (leaves) is close to 10.2%, while accuracy difference between 3 to 10 (leaves) is 5.1% approx.
-    6. 
+    5. Thus we can observe that:
+      a) accuracy diference between 2 to 3 (leaves) is close to 10.2%
+      b) accuracy difference between 3 to 10 (leaves) is 5.1% approx.
+   
     
    ##### Error Scores:
    ##### Inference:
