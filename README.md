@@ -88,20 +88,25 @@
     
    ##### Error Scores:
    ##### Inference:
+   ##### Confusion Matrix:
    
   ### Logistic Regression:
   
    ##### Accuracy:
    ##### Error Scores:
    ##### Inference:
+   ##### Confusion Matrix:
    
   ### Naive Bayes Classifier:
   
    ##### Accuracy:
    ##### Error Scores:
    ##### Inference:
-   
-  ## Future Work:
+   ##### Confusion Matrix:
+ 
+ ## Inference:
+ 
+ ## Future Work:
     1. In depth Hyperparameter Tuning with the help of Grid Search
     2. Gradient Boost
     3. Better EDA
