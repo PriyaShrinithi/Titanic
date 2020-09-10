@@ -49,17 +49,17 @@
      Thus we infer that, Women, Children and Nobles have a higher Survival Rate
      
 ## Encoding:
-  We have used an Ordinal Encoder to Encode Columns with String values. 
-  The Columns encoded using an Ordinal Encoder are as follows:
-    1. Embarked
-    2. Sex
-    3. Name_Title 
+    We have used an Ordinal Encoder to Encode Columns with String values. 
+    he Columns encoded using an Ordinal Encoder are as follows:
+      1. Embarked
+      2. Sex
+      3. Name_Title 
   
  ## HeatMap of the Correlation Coefficient:
-  1. Correlation Coeeficient r between 2 items A and B states the quality of relationship between the two items A and B.
-  2. HeatMap displays the correlation relationship between all items. 
-  3. The strongest +ve relation is however within itself for every Feature.
-  4. We use the Correlation to Select Features
+    1. Correlation Coeeficient r between 2 items A and B states the quality of relationship between the two items A and B.
+    2. HeatMap displays the correlation relationship between all items. 
+    3. The strongest +ve relation is however within itself for every Feature.
+    4. We use the Correlation to Select Features
 
 ## Features Selection:
   ### Selected: 
@@ -79,8 +79,8 @@
     7. Embarked: Low r value
     
 ## Check train and test once again:
-  To check if the order and selection of train features and test features were the same. 
-  When it was seen that they weren't, train features were switched to match test.
+    To check if the order and selection of train features and test features were the same. 
+    When it was seen that they weren't, train features were switched to match test.
 
 ## Models and Observations:
   ### Random Forest Classifier:
