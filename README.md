@@ -9,7 +9,7 @@
   ### Handling Null data:
   
    ##### Exhibit A: Age - Continuous Value:
-     Replacing Null with mean.
+     Replacing Null with mean, because at null, the plot is more centre aligned
     
    ##### Exhibit B: Embark - Discrete value:
     Replacing Null with Top
@@ -19,7 +19,7 @@
     Ergo Cabin would eventually not be selected for the features.
   
   ### Derviving Features:
-    There was a possibilty to derive the Cabin_Type and Name_Title from Cabin and Name respectively. 
+    There was a possibilty to derive the Cabin_Type, Name_Title, Family from Cabin and Name respectively. 
     
    #### Cabin_Type:
             1. Cabin_Type would simply take the alphabetical character at the start of the string.
@@ -30,6 +30,9 @@
             1. It takes the honorific of a given name such as Mr. and Mrs.
             2. It is created to contribute to the analyse the Survival rates of Nobility over the working class.
             3. Name_Titles with same meanings (Mlle, Ms. and Mme., Mrs.) have been replaced with the commonly ocured Name_Title(Ms. an Mrs.)
+  ##### Family: 
+            1. It combines the values of Parch and SibSp to create a single attribute
+            
 ## Plots:
 
   ### Sex vs Survived:
@@ -43,14 +46,20 @@
     SibSp is the abbreviated form of Sibling and Spouse.
     It was observed that Those with 1 Sibling or just their Spouse had a higher chance if Survival.
     
+  ### Age vs Survived:
+    Prople who were of ages 20-40 have a higher chance of Survuval
+    
+  ### Family vs Survived:
+    Families with 3 members have the highest chances of survival
+    
   ### Name_Title vs Survived:
      People with the Name_Titles: 'Sir', 'Countess' and 'Lady' have survived.
      Additionally, most of the people with the honorifics: 'Mrs', 'Ms', 'Master' have a higher Survival Rate
      Thus we infer that, Women, Children and Nobles have a higher Survival Rate
-     
+  
 ## Encoding:
     We have used an Ordinal Encoder to Encode Columns with String values. 
-    he Columns encoded using an Ordinal Encoder are as follows:
+    The Columns encoded using an Ordinal Encoder are as follows:
       1. Embarked
       2. Sex
       3. Name_Title 
@@ -62,12 +71,13 @@
     4. We use the Correlation to Select Features
 
 ## Features Selection:
+
   ### Selected: 
     1. Age
     2. Sex
     3. Pclass
-    4. Sibsp (Siblings and Spouses)
-    6. Parch (Parents and Children)
+    4. Family
+    5. Embarked
     
 ##  Rejected:
     1. Cabin: While this has a pretty good Correlation Coefficient values (r), we have removed this feature to more nAn values
@@ -76,7 +86,8 @@
     4. Ticket: Low r value corresponding to Survived
     5. Name: Low r value corresponding to Survived
     6. Name_Title: Removed since the r value corresponding to Survived was lesser than expected
-    7. Embarked: Low r value
+    7. SibSp: It is combined with Family
+    8. Parch Adds wright to Family
     
 ## Check train and test once again:
     To check if the order and selection of train features and test features were the same. 
@@ -86,93 +97,101 @@
   ### Random Forest Classifier:
   
    ##### Accuracy:
-    1. At max_leaf = 2, accuracy: 88.5%
-    2. At max_leaf = 3, accuracy: 98.8%
-    3. At max_leaf = 10, accuracy: 93.7%
-    4. Thus we can observe that:
-      a) accuracy diference between 2 to 3 (leaves) is close to 10.2%
-      b) accuracy difference between 3 to 10 (leaves) is 5.1% approx.
-      Inference: For Different max_leaf values, accuracy differs.
-    5. Find Optimum max_leaf, i.e max_leaf such thta it doesn't Overfit or Underfit the Data.
-    6. For the train and test dataset, the Area under curve is a perfect fit. 
-    7. We can thus obeserve that at and after the value of max_leaf value of 0.3, auc score is consistent.
-    8. Intuitively, we can say that 0.3 is the threshold.
-    9. Hence the accuracy Score is maintained at 63.6%.
-    10. Predict y.
+    1. Accuracy of RandomForest Model before Hyperparameter tuning with GridSearchCV is maintained at 80.8%
+    2. But after Applying GridSearchCV, the Accuracy of RandomForest stands at 94.4%
+    3. Best Parameters: Criteria: Entrophy, Max_Depth: 4, Max_Features: Auto, N_Estimator: 500
+    4. Predict y for both cases.
     
    ##### Error Scores:
-    1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-    2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 36.3%
-    3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 60.3%
-    
+   
+   Before HyperParameter Tuning:
+   
+      1. Error = |predicted values - actual values| (A matrix if 0 and 1)
+      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
+       b) Mean Absolute Error = 19.1%
+      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
+       b) Root Mean Squared Error = 43.7%
+      4. AUC value: 79.1
+       
+   After Hyper Parameter Tuning:
+   
+      1. Error = |predicted values - actual values| (A matrix if 0 and 1)
+      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
+       b) Mean Absolute Error = 5.5%
+      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
+       b) Root Mean Squared Error = 23.4%
+      4. AUC value: 93.7 
+       
    ##### Confusion Matrix:
-    1. [[tp fp] [fn tn]]
-    2. [[266 0][152 0]]
+   
+   Before Hyper Parameter Tuning:
+   
+      1. [[tp fp] [fn tn]]
+      2. [[227 39][41 143]]
+     
+   After Hyper Parameter Tuning:
+   
+      1. [[tp fp] [fn tn]]
+      2. [[257 9][14 138]]
     
    ##### Inference: 
-    1. Accuracy Score of Random Forest Model is phenominally low. 
+    1. Accuracy Score of Random Forest Model is phenominally low. But After HyperParameterTuning GridSearchCV, the Accuracy score becomes higher. 
   
   ### Logistic Regression:
   
    ##### Accuracy:
-    1. Accuracy Score of Logistic Regression: 93.77%.
+    1. Accuracy Score of Logistic Regression: 94.0%.
     2. Predict y.
    ##### Error Scores:
     1. Error = |predicted values - actual values| (A matrix if 0 and 1)
     2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 6.2%
+       b) Mean Absolute Error = 5.9%
     3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 24.9%
+       b) Root Mean Squared Error = 24.4%
+    4. AUC value: 93.7
    
    ##### Confusion Matrix:
     1. [[tp fp] [fn tn]]
-    2. [[252 14][12 140]]
+    2. [[252 14][11 141]]
    
    ##### Inference:
-    1. Between Random Forest and Logistic Regression models, KLogistric Regression has  a higher score of accuracy
-    2. This is because, Random Forest Model overfits.
+    1. Between Random Forest and Logistic Regression models, RandomForest after HyperparameterTuning has  a higher score of accuracy with a difference of 0.4%
     
   ### Naive Bayes Classifier:
   
    ##### Accuracy:
-    1. Accuracy Score of Logistic Regression: 91.6%.
+    1. Accuracy Score of Logistic Regression: 92.1%.
     2. Predict y
     
    ##### Error Scores:
     1. Error = |predicted values - actual values| (A matrix if 0 and 1)
     2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 8.3%
+       b) Mean Absolute Error = 7.8%
     3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 28.9%
+       b) Root Mean Squared Error = 28.0%
+    4. AUC value: 92.9
    
    ##### Confusion Matrix:
     1.  [[tp fp] [fn tn]]
-    2. [[237  29] [6 146]]
+    2. [[239  27] [6 146]]
+    
    ##### Inference:
-    1. Naive Bayes However has a higher Accuracy than Random Forest, but lower Accuracy than Logistic Regression.
+    1. Naive Bayes However has the lowest accuracy
    
  ## Conclusion:
-    1. Accuracy Score of Random Forest < Accuracy Score of Naive Bayes < Accuracy Score of Logistic Regression.  
-    2. Due to Ovefit, there is a higher error rate and no false positives or false negatives.
-    3. This would lead to errors if we were to apply this model for new data.
-    4. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
-    5. This is because it assumes that features are not correlated to eachother.
-    6. However of the three above mentioned models, Logistic Regression has the highest accuracy.
-    7. This is probably because, it doesn't overfit or Underfit and takes into consideration the corelation between attributes.
+    1. Accuracy Score of Random Forest (After HyperParamter Tuning) > Accuracy Score of Logistic Regression > Accuracy Score of Naive Bayes.  
+    2. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
+    3. This is because it assumes that features are not correlated to eachother.
+    4. However of the three above mentioned models, Random Forest has the highest accuracy.
+    5. This is probably because, it doesn't overfit or Underfit and takes into consideration the corelation between attributes.
    
  ## Model Selected based on the Above Mentioned Observations:
-  #### Logistic Regression has Higher Score!
+  #### Random Forest has Higher Score!
  
  ## Future Work:
-    1. Hyperparameter Tuning in depth
-    2. Grid Search
+    1. Hyperparameter Tuning in depth --Done for 1 model
+    2. Grid Search -- Done for 1 model
     3. Gradient Boost
     4. Better EDA
       a) In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
       b) Comparing Correlating attributes. For instance, finding which of the unmarried women who survived has at least one sibling who also survived.
-    5. Select features for a specific threshold 
-    6. Work Around for Chain Indexing
-    7. Reduce Overfit in Random Forest Model 
-       (Theoretically Overfit can be avoided by hyperparameter tuning of all parameters viz-a-viz depth, n-classifier, sample split and more.)
