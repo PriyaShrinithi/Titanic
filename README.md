@@ -218,3 +218,4 @@
       a) In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
       b) Comparing Correlating attributes. For instance, finding which of the unmarried women who survived has at least one sibling who also survived.
       c) To avoid Overfit
+    5. Model Testing
