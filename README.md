@@ -138,24 +138,46 @@
     1. Accuracy Score of Random Forest Model is phenominally low. But After HyperParameterTuning GridSearchCV, the Accuracy score becomes higher. 
   
   ### Logistic Regression:
-  
+    
    ##### Accuracy:
     1. Accuracy Score of Logistic Regression: 94.0%.
-    2. Predict y.
+    2. Accyracy Score of Logistic Regression after Hypyer Parameter Tuning stands at: 98.5%
+    3. Predict y for both cases.
    ##### Error Scores:
+   
+   Before Hyperparemeter Tuning:
+   
     1. Error = |predicted values - actual values| (A matrix if 0 and 1)
     2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
        b) Mean Absolute Error = 5.9%
     3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
        b) Root Mean Squared Error = 24.4%
     4. AUC value: 93.7
+    
+   Afte Hyperparameter Tuning:
+    
+    1. Error = |predicted values - actual values| (A matrix if 0 and 1)
+    2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
+       b) Mean Absolute Error = 1.4%
+    3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
+       b) Root Mean Squared Error = 1.1%
+    4. AUC value: 99.0
    
    ##### Confusion Matrix:
+   
+   Before Hyperparameter Tuning:
+   
     1. [[tp fp] [fn tn]]
     2. [[252 14][11 141]]
    
+   After Hyperparameter Tuning:
+    
+    1. [[tp fp] [fn tn]]
+    2. [[266 0][6 146]]
+    
    ##### Inference:
-    1. Between Random Forest and Logistic Regression models, RandomForest after HyperparameterTuning has  a higher score of accuracy with a difference of 0.4%
+    1. Between Random Forest and Logistic Regression models, RandomForest after HyperparameterTuning has  a higher score of accuracy with a difference of 0.4%.
+    2. But between Random Forest with Parameter Tuning and Logistic Regression with Hyperparameter Tuning, Logistic Regression after HyperParameter Tuning has the highest accuracy
     
   ### Naive Bayes Classifier:
   
@@ -179,19 +201,20 @@
     1. Naive Bayes However has the lowest accuracy
    
  ## Conclusion:
-    1. Accuracy Score of Random Forest (After HyperParamter Tuning) > Accuracy Score of Logistic Regression > Accuracy Score of Naive Bayes.  
+    1.  Accuracy Score of Naive Bayes < Accuracy Score of Random Forest (After HyperParamter Tuning) < Accuracy Score of Logistic Regression (After HyperParameter Tuning).  
     2. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
     3. This is because it assumes that features are not correlated to eachother.
-    4. However of the three above mentioned models, Random Forest has the highest accuracy.
-    5. This is probably because, it doesn't overfit or Underfit and takes into consideration the corelation between attributes.
+    4. However of the three above mentioned models, Logistic Regression has the highest accuracy.
+    5. Although with that high an accuracy, there are chances of overfitting
    
  ## Model Selected based on the Above Mentioned Observations:
-  #### Random Forest has Higher Score!
+  #### Logistic Regression has the Highest Score!
  
  ## Future Work:
-    1. Hyperparameter Tuning in depth --Done for 1 model
-    2. Grid Search -- Done for 1 model
+    1. Hyperparameter Tuning in depth --Done for 2 models
+    2. Grid Search -- Done for 2 models
     3. Gradient Boost
     4. Better EDA
       a) In depth analysis of Cabin feature to see if it can not be omiited simply because of NaN values
       b) Comparing Correlating attributes. For instance, finding which of the unmarried women who survived has at least one sibling who also survived.
+      c) To avoid Overfit
