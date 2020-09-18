@@ -205,10 +205,11 @@
     2. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
     3. This is because it assumes that features are not correlated to eachother.
     4. However of the three above mentioned models, Logistic Regression has the highest accuracy.
-    5. Although with that high an accuracy, there are chances of overfitting
+    5. Although with that high an accuracy, overfitting is a certainty.
    
  ## Model Selected based on the Above Mentioned Observations:
-  #### Logistic Regression has the Highest Score!
+  #### Logistic Regression has the Highest Score! 
+  #### But to avoid overfit, Model selected could either be Random Forest (After Grid Search) or Logistic Regression (Before Grid Search)
  
  ## Future Work:
     1. Hyperparameter Tuning in depth --Done for 2 models
