@@ -205,7 +205,7 @@
     2. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
     3. This is because it assumes that features are not correlated to eachother.
     4. However of the three above mentioned models, Logistic Regression has the highest accuracy.
-    5. Although with that high an accuracy, overfitting is a certainty.
+    5. Although with that high an accuracy, overfitting is a certainty, because paameters penalty and C are used exclusively for overfit.
    
  ## Model Selected based on the Above Mentioned Observations:
   #### Logistic Regression has the Highest Score! 
