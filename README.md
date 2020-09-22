@@ -18,7 +18,7 @@
     The problem with Cabin is the fact that it has way too many NaN values to the point it is the Top most value. 
     Ergo Cabin would eventually not be selected for the features.
   
-  ### Derviving Features:
+  ### Deriving Features:
     There was a possibilty to derive the Cabin_Type, Name_Title, Family from Cabin and Name respectively. 
     
    #### Cabin_Type:
