@@ -1,4 +1,4 @@
-# Titanic
+# TITANIC
 
 ## EDA:
   To understand the dataset better, we did an Exploratory Data Analysis using pandas and Numpy. 
