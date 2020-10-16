@@ -143,32 +143,24 @@
     1. Accuracy Score of Logistic Regression: 94.0%.
     2. Accyracy Score of Logistic Regression after Hypyer Parameter Tuning stands at: 95.2%
     3. Predict y for both cases.
+    
    ##### Error Scores:
-   
-   Before Hyperparemeter Tuning:
-   
-    1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-    2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 5.9%
-    3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 24.4%
-    4. AUC value: 93.7
+    1. Error = mod(predicted values - actual values) (A matrix if 0 and 1)
+    2.  Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n
+    3. Root Mean Squared Error = Sum of (predicted value - observed value) / n 
     
-   Afte Hyperparameter Tuning:
+    Before Hyperparemeter Tuning| After Hyperparameter Tuning
+    ---|---
+    Mean Absolute Error = 5.9%|  Mean Absolute Error = 4.7%
+    Root Mean Squared Error = 21.8%|  Root Mean Squared Error = 24.4%
+    AUC value: 93.7| AUC value: 92.9
     
-    1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-    2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 4.7%
-    3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 21.8%
-    4. AUC value: 92.9
-   
    ##### Confusion Matrix:
   
-   Before Hyperparameter Tuning| After Hyperparameter Tuning
-   --- | --- 
-   [[tp fp] [fn tn]]| [[tp fp] [fn tn]]
-   [[252 14][11 141]]| [[257 9][11 141]]
+    Before Hyperparameter Tuning| After Hyperparameter Tuning
+    --- | --- 
+    [[tp fp] [fn tn]]| [[tp fp] [fn tn]]
+    [[252 14][11 141]]| [[257 9][11 141]]
    
    ##### Inference:
     1. There is no Huge difference of accuracy in Logistic Regression Before or After Hyper Parameter Tuning.
@@ -190,7 +182,7 @@
    
    ##### Confusion Matrix:
     1.  [[tp fp] [fn tn]]
-    2. [[239  27] [6 146]]
+    2.  [[239  27] [6 146]]
     
    ##### Inference:
     1. Naive Bayes However has the lowest accuracy
