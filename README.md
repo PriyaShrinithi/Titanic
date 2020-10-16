@@ -164,13 +164,13 @@
     4. AUC value: 92.9
    
    ##### Confusion Matrix:
-   --- | ---
-   Before Hyperparameter Tuning:| After Hyperparameter Tuning:
+  
+   Before Hyperparameter Tuning| After Hyperparameter Tuning
    --- | --- 
    [[tp fp] [fn tn]]| [[tp fp] [fn tn]]
    --- | --- 
-   2. [[252 14][11 141]]| 2. [[257 9][11 141]]
-   --- | ---
+   [[252 14][11 141]]| [[257 9][11 141]]
+   
    ##### Inference:
     1. There is no Huge difference of accuracy in Logistic Regression Before or After Hyper Parameter Tuning.
     2. However, Logistic Regression has a higher accuracy than Random Forest
