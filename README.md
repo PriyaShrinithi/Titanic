@@ -94,6 +94,7 @@
     When it was seen that they weren't, train features were switched to match test.
 
 ## Models and Observations:
+
   ### Random Forest Classifier:
   
    ##### Accuracy:
@@ -145,15 +146,23 @@
     3. Predict y for both cases.
     
    ##### Error Scores:
-    1. Error = mod(predicted values - actual values) (A matrix if 0 and 1)
-    2.  Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n
-    3. Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-    
-    Before Hyperparemeter Tuning| After Hyperparameter Tuning
-    ---|---
-    Mean Absolute Error = 5.9%|  Mean Absolute Error = 4.7%
-    Root Mean Squared Error = 21.8%|  Root Mean Squared Error = 24.4%
-    AUC value: 93.7| AUC value: 92.9
+    Before HyperParameter Tuning:
+   
+      1. Error = |predicted values - actual values| (A matrix if 0 and 1)
+      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
+       b) Mean Absolute Error =5.9%|
+      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
+       b) Root Mean Squared Error =  21.8%
+      4. AUC value: 93.7
+       
+   After Hyper Parameter Tuning:
+   
+      1. Error = |predicted values - actual values| (A matrix if 0 and 1)
+      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
+       b) Mean Absolute Error = 4.7%
+      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
+       b) Root Mean Squared Error = 24.4%
+      4. AUC value: 92.9
     
    ##### Confusion Matrix:
   
@@ -194,6 +203,7 @@
     4. However of the three above mentioned models, Logistic Regression has the highest accuracy.
    
  ## Model Selected based on the Above Mentioned Observations:
+ 
   #### Logistic Regression has the Highest Score! 
  
  ## Future Work:
