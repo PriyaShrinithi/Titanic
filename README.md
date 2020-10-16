@@ -168,7 +168,6 @@
    Before Hyperparameter Tuning| After Hyperparameter Tuning
    --- | --- 
    [[tp fp] [fn tn]]| [[tp fp] [fn tn]]
-   --- | --- 
    [[252 14][11 141]]| [[257 9][11 141]]
    
    ##### Inference:
