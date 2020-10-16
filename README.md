@@ -141,7 +141,7 @@
     
    ##### Accuracy:
     1. Accuracy Score of Logistic Regression: 94.0%.
-    2. Accyracy Score of Logistic Regression after Hypyer Parameter Tuning stands at: 98.5%
+    2. Accyracy Score of Logistic Regression after Hypyer Parameter Tuning stands at: 95.2%
     3. Predict y for both cases.
    ##### Error Scores:
    
@@ -158,13 +158,13 @@
     
     1. Error = |predicted values - actual values| (A matrix if 0 and 1)
     2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 1.4%
+       b) Mean Absolute Error = 4.7%
     3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 1.1%
-    4. AUC value: 99.0
+       b) Root Mean Squared Error = 21.8%
+    4. AUC value: 92.9
    
    ##### Confusion Matrix:
-   
+   -------
    Before Hyperparameter Tuning:
    
     1. [[tp fp] [fn tn]]
@@ -173,11 +173,11 @@
    After Hyperparameter Tuning:
     
     1. [[tp fp] [fn tn]]
-    2. [[266 0][6 146]]
-    
+    2. [[257 9][11 141]]
+    -------
    ##### Inference:
-    1. Between Random Forest and Logistic Regression models, RandomForest after HyperparameterTuning has  a higher score of accuracy with a difference of 0.4%.
-    2. But between Random Forest with Parameter Tuning and Logistic Regression with Hyperparameter Tuning, Logistic Regression after HyperParameter Tuning has the highest accuracy
+    1. There is no Huge difference of accuracy in Logistic Regression Before or After Hyper Parameter Tuning.
+    2. However, Logistic Regression has a higher accuracy than Random Forest
     
   ### Naive Bayes Classifier:
   
@@ -205,11 +205,9 @@
     2. While the error scores and accuracy scores are quite moderate, using Naive bayes isn't best practice 
     3. This is because it assumes that features are not correlated to eachother.
     4. However of the three above mentioned models, Logistic Regression has the highest accuracy.
-    5. Although with that high an accuracy, overfitting is a certainty, because paameters penalty and C are used exclusively for overfit.
    
  ## Model Selected based on the Above Mentioned Observations:
   #### Logistic Regression has the Highest Score! 
-  #### But to avoid overfit, Model selected could either be Random Forest (After Grid Search) or Logistic Regression (Before Grid Search)
  
  ## Future Work:
     1. Hyperparameter Tuning in depth --Done for 2 models
