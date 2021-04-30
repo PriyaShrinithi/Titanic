@@ -117,11 +117,7 @@
    After Hyper Parameter Tuning:
    
       1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 5.5%
-      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 23.4%
-      4. AUC value: 93.7 
+      2. AUC value: 93.7 
        
    ##### Confusion Matrix:
    
@@ -149,20 +145,12 @@
     Before HyperParameter Tuning:
    
       1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error =5.9%|
-      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error =  21.8%
-      4. AUC value: 93.7
+      2. AUC value: 93.7
        
    After Hyper Parameter Tuning:
    
       1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 4.7%
-      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 24.4%
-      4. AUC value: 92.9
+      2. AUC value: 92.9
     
    ##### Confusion Matrix:
   
@@ -183,11 +171,7 @@
     
    ##### Error Scores:
     1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-    2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 7.8%
-    3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 28.0%
-    4. AUC value: 92.9
+    2. AUC value: 92.9
    
    ##### Confusion Matrix:
     1.  [[tp fp] [fn tn]]
