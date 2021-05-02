@@ -108,11 +108,7 @@
    Before HyperParameter Tuning:
    
       1. Error = |predicted values - actual values| (A matrix if 0 and 1)
-      2. a) Mean Absolute Error = Sum of ((predicted value - observed value) ^2)/ n 
-       b) Mean Absolute Error = 19.1%
-      3. a) Root Mean Squared Error = Sum of (predicted value - observed value) / n 
-       b) Root Mean Squared Error = 43.7%
-      4. AUC value: 79.1
+      2. AUC value: 79.1
        
    After Hyper Parameter Tuning:
    
